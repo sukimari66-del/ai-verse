@@ -1,15 +1,20 @@
-# AIVerse — deployment repository
+# AIVerse — deployment instructions
 
-This repository hosts the AIVerse Stage 1 Next.js project for deployment on Vercel.
+**Status: the project source files are not uploaded to this repository yet.** This repository currently contains setup notes only, so do not deploy this repository through Vercel yet.
 
-## Deploy
+## Deploy the supplied project ZIP (recommended)
 
-Use the Vercel import link: https://vercel.com/new/import?s=https%3A%2F%2Fgithub.com%2Fsukimari66-del%2Fai-verse
+1. Download `aiverse-deploy-ready.zip` from the ChatGPT conversation and extract it on a Windows PC.
+2. Install Node.js 22 LTS: https://nodejs.org/en/download
+3. Open the extracted `aiverse` folder and double-click `DEPLOY_TO_VERCEL.bat`.
+4. Follow the Vercel sign-in prompts. When deployment succeeds, copy the `https://...vercel.app` URL printed by the CLI.
 
-Vercel will install dependencies and build the app. The deployed site URL is created only after the build succeeds.
+Vercel CLI upload requires an internet connection and a Vercel account. A public website URL does not exist until Vercel completes the production build successfully.
 
-## What's included
+## Project status
 
-Stage 1 includes the homepage, featured AI tools, categories, theme toggle, and placeholder routes. AI chat, sign-in, custom AI creation, and personalised news are future stages.
+This is AIVerse Stage 1. It includes the homepage, featured AI tools, categories, theme toggle, and placeholder routes. AI chat, sign-in, custom AI creation, and personalised news are later stages. Stage 1 does not require API keys.
 
-No API keys are required for Stage 1.
+## Testing note
+
+A full dependency install/build could not be completed in the packaging environment because access to the npm registry timed out. Vercel will perform installation and build during deployment. If it fails, review the build log.
